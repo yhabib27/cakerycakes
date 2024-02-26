@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakery Cakes</title>
+    <!-- code for fonts (google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+    background-image: url('./background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Prevents background image from scrolling */
+}
+
+        .container{
+            /* background-color:bisque ; */
+            margin-bottom: 20px; /* Example: Adding margin bottom */
+            margin-top: 40px;
+        }
+        .card-img-top {
+            height: 400px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+        h2{
+            font-family: "Dancing Script", cursive;
+            font-size: 50px;
+            color: white;
+        }
+        button {
+            position: relative;
+            padding: 12px 35px;
+            background: #fec195;
+            font-size: 17px;
+            font-weight: 500;
+            color: #181818;
+            border: 3px solid #fec195;
+            border-radius: 8px;
+            box-shadow: 0 0 0 #fec1958c;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            }
+
+            .star-1 {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+            }
+
+            .star-2 {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+            }
+
+            .star-3 {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+            }
+
+            .star-4 {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+            }
+
+            .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+            }
+
+            .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #fffdef);
+            z-index: -5;
+            transition: all 0.8s ease;
+            }
+
+            button:hover {
+            background: transparent;
+            color: #fec195;
+            box-shadow: 0 0 25px #fec1958c;
+            }
+
+            button:hover .star-1 {
+            position: absolute;
+            top: -80%;
+            left: -30%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            button:hover .star-2 {
+            position: absolute;
+            top: -25%;
+            left: 10%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            button:hover .star-3 {
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            button:hover .star-4 {
+            position: absolute;
+            top: 30%;
+            left: 80%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            button:hover .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 115%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            button:hover .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 60%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 10px #fffdef);
+            z-index: 2;
+            }
+
+            .fil0 {
+            fill: #fffdef;
+            }
+
+            button {
+                font-size: 17px;
+                padding: 0.5em 2em;
+                border: transparent;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+                background: dodgerblue;
+                color: white;
+                border-radius: 4px;
+            }
+
+            button:hover {
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+            }
+
+            button:active {
+            transform: translate(0em, 0.2em);
+            }
+
+            
+
+    </style>
+</head>
+<body>
+<div class="container" >
+<!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <img src="logo.jpg" class="img-thumbnail" alt="...">
+
+              <a class="navbar-brand ms-5" href="#">Cakery Cakes</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Price List</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link"> Contact Us</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+<!-- end Navigation bar -->
+
+<!-- About Mai -->
+
+<div class="container">
+    <div class="row justify-content-center"> <!--justify to center horizontally-->
+        <div class="col-md-6" >
+            <div class="card" style="width: 18rem;">
+                <img src="mai.jpg" class="card-img-top" alt=".">
+                <div class="card-body">
+                <h5 class="card-title">Mai El Sebai</h5>
+                <p class="card-text"></p>
+                <!-- <a href="#" class="btn btn-primary">Order Now</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">About Me</h5>
+                <p class="card-text">
+                    Hey there! I'm Mai, the creative force behind Cakery Cakes, your go-to destination for delightful cakes and cupcakes. With a background in Art, I stumbled upon the world of baking and fell in love. From whimsical cupcakes to elegant layer cakes, each creation is crafted with care and attention to detail.
+                    
+                    Join me on this sweet journey, where every bite is a celebration of love and joy. Let's spread sweetness together, one delicious treat at a time!
+                    
+                    With love and buttercream,
+                    Mai</p>
+
+<!-- button order begin -->
+<button> Order Now
+</button>
+<!-- button order end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+<!-- Carousel begin -->
+
+<!-- 
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="cake1.jpg" class="d-block w-100" alt="cake1">
+            </div>
+            <div class="carousel-item">
+                <img src="cake2.jpg" class="d-block w-100" alt="cake2">
+            </div>
+            <div class="carousel-item">
+                <img src="cake3.jpg" class="d-block w-100" alt="cake3">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+<!-- Carousel end -->
+
+<!-- lines  -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<!-- Title for custom cakes -->
+
+<h2 class="p-2" id="customcake" >Custom Made Cakes</h2>
+
+<!-- Cards Begin -->
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cake2.jpg" class="card-img-top" alt=".">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cake4.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cake5.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <!-- <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+<!-- Cards End -->
+
+
+<!-- lines  -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<!-- Title for Cookies -->
+
+<h2 class="p-2" id="cookies" >Cookies</h2>
+
+<!-- Cards Begin -->
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cookies1.jpg" class="card-img-top" alt=".">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cookies2.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cookies3.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <!-- <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+<!-- cupcakes begin -->
+
+<!-- lines  -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+
+<!-- Title for cupcakes -->
+
+<h2 class="p-2" id="cupcakes" >Cupcakes</h2>
+
+<!-- Cards Begin -->
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cupcake1.jpg" class="card-img-top" alt=".">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cupcake2.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cupcake4.jpg" class="card-img-top" alt="...">
+                        <!-- <div class="card-body"> -->
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <!-- <a href="#" class="btn btn-primary">Order Now</a> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+<!-- Cards End -->
+
+
+<!-- lines -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<!-- <hr class="border border-danger border-2 opacity-50"> -->
+<hr class="border-3 border-primary border-3 opacity-75">
+
+<!-- line end -->
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-md-3" >
+
+            <!-- <div class="col " > -->
+                <button>
+                    Order Now
+                    <div class="star-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                          <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                  
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
